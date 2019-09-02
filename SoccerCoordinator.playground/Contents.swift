@@ -2,7 +2,7 @@
 
 import UIKit
 
-//step 1: we are creating a dict for each player with all their personal information
+//step 1: we are creating a dict for each player with all their personal information -- I also changed the variables to camelcase style from the feedback I recieved prior
 let joeSmith : [String : String] = ["name" : "Joe Smith", "height" : "42", "isExperienced" : "YES", "guardian" : "Jim and Jan Smith"]
 let jillTanner : [String : String] = ["name" : "Jill Tanner", "height" : "36", "isExperienced" : "YES", "guardian" : "Clara Tanner"]
 let billBon : [String : String] = ["name" : "Bill Bon", "height" : "43", "isExperienced" : "YES", "guardian" : "Sara and Jenny Bon"]
@@ -67,7 +67,7 @@ func createTeams() {
     //variable which will determine the number of players on each team
     var teamNumber = players.count / league.count
     
-    //variable will determine how many expirenced players and non expirenced players on each team
+    //variable will determine how many expirenced players and non expirenced players on each team (created this variable to reduce static numbers in code based on feedback...)
     var halfOfTeam = players.count / league.count / 2
     
     for expirencedPlayer in 0...expirencedPlayers.count {
@@ -126,6 +126,7 @@ func createLetters() {
     
     //all the letters are stored into an empty array and then printed
     for letter in letters {
+        //this print line is a more efficient way to add a space (from feedback)
         print(letter, separator: "", terminator: "\n\n")
     }
     
