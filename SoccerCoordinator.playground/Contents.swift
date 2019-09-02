@@ -64,15 +64,18 @@ func createTeams() {
     
     //expirenced players are added to teams
     
+    //variable which will determine the number of players on each team
+    var teamNum = players.count / 3
+    
     for exPlayer in 0...expirencedPlayers.count {
         
-        if teamSharks.count != 3 {
+        if teamSharks.count != teamNum / 2 {
             teamSharks.append(expirencedPlayers[exPlayer])
             
-        } else if teamDragons.count != 3 && teamSharks.count == 3 {
+        } else if teamDragons.count != teamNum / 2 && teamSharks.count == teamNum / 2 {
             teamDragons.append(expirencedPlayers[exPlayer])
             
-        } else if teamRaptors.count != 3 && teamSharks.count == 3 && teamDragons.count == 3 {
+        } else if teamRaptors.count != teamNum / 2 && teamSharks.count == teamNum / 2 && teamDragons.count == teamNum / 2 {
             teamRaptors.append(expirencedPlayers[exPlayer])
         }
         
@@ -82,13 +85,13 @@ func createTeams() {
         
     //non-expirenced players are added to teams
 
-        if teamSharks.count != 6 {
+        if teamSharks.count != teamNum {
             teamSharks.append(nonExpirencedPlayers[nonExpPlater])
             
-        } else if teamDragons.count != 6 && teamSharks.count == 6 {
+        } else if teamDragons.count != teamNum && teamSharks.count == teamNum {
             teamDragons.append(nonExpirencedPlayers[nonExpPlater])
             
-        } else if teamRaptors.count != 6 && teamSharks.count == 6 && teamDragons.count == 6 {
+        } else if teamRaptors.count != teamNum && teamSharks.count == teamNum && teamDragons.count == teamNum {
             teamRaptors.append(nonExpirencedPlayers[nonExpPlater])
         }
         
