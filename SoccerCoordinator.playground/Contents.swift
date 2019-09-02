@@ -65,7 +65,7 @@ func createTeams() {
     //expirenced players are added to teams
     
     //variable which will determine the number of players on each team
-    var teamNum = players.count / 3
+    var teamNum = players.count / league.count
     
     for exPlayer in 0...expirencedPlayers.count {
         
